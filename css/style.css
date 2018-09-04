@@ -1,0 +1,199 @@
+/* Body Style */
+body {
+    text-align: center;
+    color: white;
+    background: black;
+} 
+
+::-moz-selection { /* Code for Firefox */
+    color: rgba(255, 0, 0, 0.8);
+    background: rgba(255, 255, 0, 0.8);
+}
+
+::selection {
+    color: rgba(255, 0, 0, 0.8);
+    background: rgba(255, 255, 0, 0.8);
+}
+
+/* Custom Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black; 
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 0, 0.8);  
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 0);; 
+} 
+
+/* The Loader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+}
+.no-js #loader-wrapper {
+    display: none;
+}
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    z-index: 10;
+}
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+    background: black;
+}
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+    background: rgb(255, 255, 0);
+}
+
+/* Loaded styles */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    transition: all 0.9s 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: all 0.9s 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.loaded #loader-wrapper {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    transition: all 0.3s 1s ease-out;
+}
+  
+/* Header Style */
+h1 {
+    font-size: 50px;
+}
+header {
+    font-family: 'Cinzel', serif;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    text-align: center;
+    background-color: black;
+}
+
+/* Content Style */
+.container-fluid {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+  
+/* About Container */
+#about {
+    background-color: rgba(255, 255, 0, 0.8);
+    color: black;
+}
+#about p {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Paytone One', sans-serif;
+    text-align: left;
+}
+
+/* Skills Container */
+h2 {
+    font-family: 'Paytone One', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 80px;
+    padding: 0 40px 0 40px;
+}
+#skills {
+    font-family: 'Josefin Slab', serif;
+    font-size: 19px;
+}
+ul {
+    list-style: none;
+    font-size: 20px;
+    text-align: left;
+}
+
+/*Footer Style */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    text-align: center;
+    background-color: black;
+}
+footer a {
+    padding: 20px;
+    color: rgba(255, 255, 0, 0.8);
+}
+footer a:hover {
+    color: yellow;
+}
+
+/* Style for Medium and Small Screens */
+@media (max-width: 1090px) {
+    #about p {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 640px) {
+    #about p {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+}
+@media (max-width: 460px) {
+    .container-fluid {
+        width: 100%;
+    }
+    #about p {
+        font-size: 28px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+}
